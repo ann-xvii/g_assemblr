@@ -40,11 +40,13 @@ header {
 
 .about-grid .container .row{
 	color: rgb(255,255,255);
+	margin: 0 auto;
 
 	.four-grid {
 		min-height: 200px;
 		display: inline-block;
 		margin: 0 auto;
+		text-align: center;
 		border: 2px solid white;
 	}
 
