@@ -14,6 +14,8 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
+gem 'poltergeist'
+gem 'figaro'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 
