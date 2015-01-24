@@ -10,13 +10,20 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+
+gem 'therubyracer', platforms: :ruby
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-linkedin'
+
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
 gem 'poltergeist'
 gem 'figaro'
 gem 'sdoc', '~> 0.4.0', group: :doc
+
+
 
 
 group :development do
