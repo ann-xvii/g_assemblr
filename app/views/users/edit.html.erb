@@ -3,12 +3,12 @@
 <%= form_for @user do |f| %>
 	
 	<div>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</div>
-	<div>
 		<%= f.label :program %>
 		<%= f.select :program, PROGRAMS %>
+	</div>
+	<div>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
 	</div>
 	<div>
 		<%= f.label :current_status %>
