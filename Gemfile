@@ -23,7 +23,7 @@ gem 'poltergeist'
 gem 'figaro'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-
+gem 'rspec_junit_formatter', :github => 'circleci/rspec_junit_formatter', group: :test
 
 
 group :development do
