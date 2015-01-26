@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get '/linkedin/auth' => 'linkedin#auth'
   get '/linkedin/callback' => 'linkedin#callback'
 
+  get '/posts' => 'posts#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
