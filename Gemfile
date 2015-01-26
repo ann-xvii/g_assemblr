@@ -42,12 +42,15 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'shoulda-matchers', require: false
 end
 
+gem 'factory_girl_rails'
 
 group :test do
 	gem 'capybara', '~> 2.4.4'
-	gem 'shoulda-matchers', '~> 2.7.0'
+	
+	
 end
 
 gem 'rails_12factor', group: :production
