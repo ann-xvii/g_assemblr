@@ -16,6 +16,9 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-linkedin'
 
+# LINKEDIN GEM
+gem 'linkedin', '~> 1.0.0'
+
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
