@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'static_pages/about'
   resources :users, only: [:show, :edit, :update, :index]
 
+  get '/linkedin/auth' => 'linkedin#auth'
+  get '/linkedin/callback' => 'linkedin#callback'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
