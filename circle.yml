@@ -7,5 +7,5 @@ deployment:
     aws:
     branch: master
         commands:
-        - jekyll build
-        - /bin/bash publish.sh
+        	- jekyll build
+        	- /bin/bash publish.sh
