@@ -18,6 +18,7 @@ gem 'omniauth-linkedin'
 
 # LINKEDIN GEM
 gem 'linkedin', '~> 1.0.0'
+gem "linkedin-oauth2", "~> 1.0"
 
 gem 'carrierwave'
 gem 'fog'
