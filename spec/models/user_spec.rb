@@ -12,4 +12,9 @@ RSpec.describe User, :type => :model do
   it "raises an error without a name" do
   	expect{subject.save!}.to raise_error(ActiveRecord::RecordInvalid)
   end
+
+  it "is invalid without an email address" do
+  	user = FactoryGirl.build_stubbed(:no_email)
+  	expect(user).to be_invalid
+  end
 end
