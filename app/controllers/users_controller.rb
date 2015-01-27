@@ -6,6 +6,11 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		@client = LinkedIn::Client.new(ENV['LINKEDIN_KEY'], ENV['LINKEDIN_SECRET'])
+		# @client.authorize_from_access(@user.rtoken, @user.rsecret)
+		# the_user = @client.profile(:fields => [:positions]).positions
+		# # the_user = client.profile(:fields => %w(positions))
+		# @companies = the_user.positions.all.map{|t| t.company}
 	end
 
 	def edit
