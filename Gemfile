@@ -11,10 +11,13 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
+
+# SOCIAL GEMS
 gem 'therubyracer', platforms: :ruby
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-linkedin'
+gem 'twitter', '~> 5.13.0'
 
 gem 'carrierwave'
 gem 'fog'
