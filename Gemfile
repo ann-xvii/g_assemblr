@@ -18,6 +18,8 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-linkedin'
 gem 'twitter', '~> 5.13.0'
+gem 'dotenv-rails', :groups => [:development, :test]
+gem 'feedjira', '~> 1.6.0'
 
 gem 'carrierwave'
 gem 'fog'
