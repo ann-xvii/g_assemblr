@@ -5,6 +5,8 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		# user = client.profile(:fields => %w(positions))
+		# companies = user.positions.all.map{|t| t.company}
 	end
 
 	def edit
@@ -19,6 +21,11 @@ class UsersController < ApplicationController
 			render :edit
 		end
 	end
+
+	# def login
+	# 	@token = request.env['omniauth.auth']['credentials']['token']
+	# 	@secret = request.env['omniauth.auth']['credentials']['secret']
+	# end
 
 	private
 
