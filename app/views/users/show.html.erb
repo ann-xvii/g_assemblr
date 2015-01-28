@@ -1,9 +1,21 @@
-<%= image_tag @user.image.url, :size => "400x300", :crop => :fill %>
+<div class="container profile">
+	<div class="row">
+		<div class="col-md-3 col-md-offset-2">
+			<%= image_tag @user.image.url, :size => "250x200", :crop => :fill %></br>
+			<%= link_to "Edit My Profile", edit_user_path(current_user) %>
+		</div>
+		<div class="col-md-5">	
+			<h1><%= @user["name"] %></h1>
+			<p>Graduated from the <%= @user["program"] %> Immersive program.</p>
+			<p>Currently located in <%= @user["location"] %>.</p>
+			<p><%= @user["current_status"] %></p>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			<h2>About Me</h2>
+			<p><%= @user["description"] %></p>
+		</div>
+	</div>
 
-<h1><%= @user["email"] %></h1>
-<p><%= @user["name"] %></p>
-<p><%= @user["program"] %></p>
-<p><%= @user["location"] %></p>
-<p><%= @user["current_status"] %></p>
-<p><%= @user["description"] %></p>
-<%= link_to "Edit My Profile", edit_user_path(current_user) %>
+</div>
