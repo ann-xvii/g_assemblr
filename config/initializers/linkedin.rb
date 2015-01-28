@@ -37,4 +37,3 @@ end
 # request_token.authorize_url
 
 # client.authorize_from_request(rtoken, rsecret, pin)
->>>>>>> e7d06f842e79acc1812512a5b8c86621073fca3e
