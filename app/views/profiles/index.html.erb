@@ -1,10 +1,12 @@
 <h1>The GA Network</h1>
 
-<% @profiles.each do |profile| %>
+<% @appends.each do | a | %>
 
-	<p><%= profile[:name] %></p>
-	<p><%= profile[:title] %></p>
-	<%= image_tag profile[:image] %>
+	<% a.each do | b | %>
+		<%= b[:name] %>
+		<%= b[:title] %>
+		<%= image_tag b[:image], class: "img-responsive" %>
+	<% end %>
 
 <% end %>
 
