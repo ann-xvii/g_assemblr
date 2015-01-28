@@ -382,7 +382,7 @@ DEPENDENCIES
   fog
   jbuilder (~> 2.0)
   jquery-rails
-  linkedin
+  linkedin (~> 1.0.0)
   mini_magick
   omniauth
   omniauth-linkedin
