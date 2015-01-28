@@ -1,0 +1,12 @@
+<h1>The GA Network</h1>
+
+<% @appends.each do | a | %>
+
+	<% a.each do | b | %>
+		<%= b[:name] %>
+		<%= b[:title] %>
+		<%= image_tag b[:image], class: "img-responsive" %>
+	<% end %>
+
+<% end %>
+
