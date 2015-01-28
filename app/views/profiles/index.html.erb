@@ -1,0 +1,10 @@
+<h1>The GA Network</h1>
+
+<% @profiles.each do |profile| %>
+
+	<p><%= profile[:name] %></p>
+	<p><%= profile[:title] %></p>
+	<%= image_tag profile[:image] %>
+
+<% end %>
+

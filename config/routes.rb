@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   get 'static_pages/about'
   resources :users, only: [:show, :edit, :update, :index]
+  get '/profiles' => 'profiles#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
