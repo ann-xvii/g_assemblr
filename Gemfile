@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'therubyracer', platforms: :ruby
 gem 'devise'
 gem 'omniauth'
+gem 'linkedin', '~> 1.0.0'
 gem 'omniauth-linkedin'
 gem 'linkedin'
 gem 'twitter', '~> 5.13.0'
