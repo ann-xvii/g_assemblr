@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :statuses
+
   get 'twitter/index' => 'twitter#index'
 
   root "static_pages#home"
