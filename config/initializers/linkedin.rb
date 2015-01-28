@@ -20,7 +20,7 @@ end
 $linkedin_client = LinkedIn::Client.new(ENV['LINKEDIN_KEY'], ENV['LINKEDIN_SECRET'])
 # $client = LinkedIn::Client.new(ENV['LINKEDIN_KEY'], ENV['LINKEDIN_SECRET'], LINKEDIN_CONFIGURATION)
 
-# $request_token = $client.request_token({}, :scope => "r_basicprofile r_emailaddress r_network")
+#$request_token = $linkedin_client.request_token({}, :scope => "r_basicprofile r_emailaddress r_network")
 
 # rtoken = request_token.token
 # rsecret = request_token.secret
