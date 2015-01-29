@@ -17,5 +17,14 @@
 			<p><%= @user["description"] %></p>
 		</div>
 	</div>
+<% if @user.linkedin_datum %>
+	<div>
+		<h1 style="color: black">
+			Linkedin Data
+			<%= @user.linkedin_datum.name %>
+			<%= @user.linkedin_datum.created_at %>
+		</h1>
+	</div>
+<% end %>
 
 </div>
