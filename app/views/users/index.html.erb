@@ -1,18 +1,36 @@
-<h1>Users</h1>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Spacegallery</title>
+    <link rel="stylesheet" media="screen" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/spacegallery.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/eye.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/spacegallery.js"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Spacegallery</h1>
+        <ul class="navigationTabs">
+            <li><a href="#about" rel="about">About</a></li>
+        </ul>
+        <div class="tabsContent">
+            <div class="tab">
+                <h2>About</h2>
+        <p>Again another image gallery. Click on the images bellow to see it in action.</p>
+        <div id="myGallery" class="spacegallery">
+          <!-- do .each loop inside of div for each user.....output attributes that we want -->
+                    <% @users.each do |user|%>
+                    <img><%= image_tag user.image.url %></img>
+                    <% end %>
+        </div>
 
-<div id="myCarousel" class="carousel slide">
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-  <!-- Carousel items -->
-  <div class="carousel-inner">
-    <div class="active item">…</div>
-    <div class="item">…</div>
-    <div class="item">…</div>
-  </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-</div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
