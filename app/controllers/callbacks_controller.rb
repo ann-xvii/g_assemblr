@@ -7,6 +7,7 @@ class CallbacksController < Devise::OmniauthCallbacksController
 
 		token = user_data["credentials"]["token"]
 		secreto = user_data["credentials"]["secret"]
+		$pic_url = info["image"]
 
 		# connect to API
 		$the_client = LinkedIn::Client.new
@@ -20,6 +21,7 @@ class CallbacksController < Devise::OmniauthCallbacksController
 		@linkedin = LinkedinDatum.new
 		@linkedin.name = info["name"]
 		@linkedin.location = info["location"]
+		@linkedin.image = info["image"]
 		@linkedin.user = @user
 		@linkedin.save!
 		sign_in_and_redirect @user
