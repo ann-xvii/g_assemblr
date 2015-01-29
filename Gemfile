@@ -22,6 +22,8 @@ gem 'twitter', '~> 5.13.0'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'feedjira', '~> 1.6.0'
 
+gem 'github_api'
+
 gem 'carrierwave'
 gem 'fog'
 gem 'mini_magick'
