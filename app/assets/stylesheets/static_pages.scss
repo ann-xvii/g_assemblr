@@ -3,17 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body {
-	
-	
-}
-
-
 header {
 	// border-bottom: 1px solid rgb(0,0,0);
 	background: image-url('bw_globe.jpg') no-repeat;
 	background-size: cover;
-	margin-top: 100px;
+	// margin-top: 100px;
 	color: rgba(255,255,255, 1);
 
 	h1 {
@@ -58,7 +52,7 @@ body {
 }
 
 body {
-    font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
+    // font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .text-vertical-center {
@@ -71,7 +65,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 4.5em;
-    font-weight: 700;
+    // font-weight: 700;
 }
 
 /* Custom Button Styles */
@@ -200,7 +194,7 @@ hr.small {
     position: relative;
     width: 100%;
     height: 100%;
-    background: url(../img/bg.jpg) no-repeat center center scroll;
+    background: image-url('bg.jpg') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -230,7 +224,7 @@ hr.small {
     width: 100%;
     height: 400px;
     color: #fff;
-    background: url(../img/callout.jpg) no-repeat center center scroll;
+    background: image-url('callout.jpg') no-repeat center center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -240,7 +234,8 @@ hr.small {
 /* Portfolio */
 
 .portfolio {
-    padding: 50px 0;
+    // padding: 50px 0 50px 0;
+    padding: 0 0 50px 0;
 }
 
 .portfolio-item {
