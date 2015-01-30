@@ -12,6 +12,7 @@ class CallbacksController < Devise::OmniauthCallbacksController
 		# connect to API
 		$the_client = LinkedIn::Client.new
 		$the_client.authorize_from_access(token, secreto)
+		request_token = 
 		$safety = $the_client.profile
 		$pictures = $the_client.picture_urls
 		
