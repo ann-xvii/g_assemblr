@@ -16,6 +16,7 @@ class CallbacksController < Devise::OmniauthCallbacksController
 		$safety = $the_client.profile
 		$pictures = $the_client.picture_urls
 		$connex = $the_client.connections
+		$the_groups = $the_client.group_memberships
 		# $reply = Httparty.get('https://api.linkedin.com/v1/people/~')
 		
 
