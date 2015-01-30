@@ -8,6 +8,9 @@
 			<h1><%= @user["name"] %></h1>
 			<p>Graduated from the <%= @user["program"] %> Immersive program.</p>
 			<p>Currently located in <%= @user["location"] %>.</p>
+			<% if @user.github_datum %>
+			<p>Github Username: <%= @user.username %></p>
+			<% end %>
 			<p><%= @user["current_status"] %></p>
 		</div>	
 	</div>
