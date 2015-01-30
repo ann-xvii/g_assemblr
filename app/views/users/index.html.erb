@@ -1,4 +1,37 @@
-<h1>Users</h1>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>Spacegallery</title>
+    <link rel="stylesheet" media="screen" type="text/css" href="css/layout.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/spacegallery.css" />
+    <link rel="stylesheet" media="screen" type="text/css" href="css/custom.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/eye.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/spacegallery.js"></script>
+    <script type="text/javascript" src="js/layout.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Spacegallery</h1>
+        <ul class="navigationTabs">
+            <li><a href="" rel="about">Go To Profile</a></li>
+        </ul>
+        <div class="tabsContent">
+            <div class="tab">
+                <h2>About</h2>
+        <p>Again another image gallery. Click on the images bellow to see it in action.</p>
+        <div id="myGallery" class="spacegallery">
+          <!-- do .each loop inside of div for each user.....output attributes that we want -->
+                    <% @users.each do |user|%>
+                        <%= link_to user do %>
+                            <%= image_tag user.image %>
+                        <% end %>    
+
+                    <% end %>
+        </div>
+
 
 <div class="ia-container">
                  
