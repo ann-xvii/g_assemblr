@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150130020745) do
+ActiveRecord::Schema.define(version: 20150130071523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "github_data", force: :cascade do |t|
+    t.string   "username"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "linkedin_data", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "location"
+    t.string   "description"
+    t.string   "phone"
+    t.string   "image"
+    t.string   "headline"
+    t.string   "industry"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.string   "name"
@@ -25,11 +48,10 @@ ActiveRecord::Schema.define(version: 20150130020745) do
   end
 
   create_table "statuses", force: :cascade do |t|
-    t.string   "body"
-    t.string   "status_updater"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
-    t.integer  "user_id"
+    t.string   "name"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -54,6 +76,9 @@ ActiveRecord::Schema.define(version: 20150130020745) do
     t.string   "provider"
     t.string   "uid"
     t.string   "image"
+    t.string   "username"
+    t.string   "l_token"
+    t.string   "l_secret"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
