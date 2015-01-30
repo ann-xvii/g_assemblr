@@ -17,10 +17,11 @@
 			<p><%= @user["description"] %></p>
 		</div>
 	</div>
+
 <% if @user.linkedin_datum %>
 	<div>
+		<h1>Linkedin</h1>
 		<p style="color: black">
-			Linkedin Data
 			<%= @user.linkedin_datum.name %>
 			<%= @user.linkedin_datum.created_at %>
 			<%= @user.linkedin_datum.location %>
@@ -35,5 +36,11 @@
 		</p>
 	</div>
 <% end %>
+
+
+<% if @user %>
+	<h1>Github</h1>
+<% end %>
+
 
 </div>
