@@ -15,6 +15,8 @@ class CallbacksController < Devise::OmniauthCallbacksController
 		request_token = 
 		$safety = $the_client.profile
 		$pictures = $the_client.picture_urls
+		$connex = $the_client.connections
+		# $reply = Httparty.get('https://api.linkedin.com/v1/people/~')
 		
 
 		#link linkedin to user
@@ -22,7 +24,8 @@ class CallbacksController < Devise::OmniauthCallbacksController
 		@linkedin = LinkedinDatum.new
 		@linkedin.name = info["name"]
 		@linkedin.location = info["location"]
-		@linkedin.image = info["image"]
+		@linkedin.image = $pictures.all.first
+		# @linkedin.image = info["image"]
 		@linkedin.user = @user
 		@linkedin.save!
 		sign_in_and_redirect @user

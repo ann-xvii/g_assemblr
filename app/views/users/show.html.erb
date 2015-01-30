@@ -7,13 +7,8 @@
 		<div class="col-md-5">	
 			<h1><%= @user["name"] %></h1>
 			<p>Graduated from the <%= @user["program"] %> Immersive program.</p>
-			<p>Currently located in <%= @user["location"] %>.</p>
-			
-				
-			
-			
-			<p><%#= @user["current_status"] %></p>
-			
+			<p>Currently located in <%= @user["location"] %>.</p>	
+			<p><%#= @user["current_status"] %></p>	
 		</div>	
 	
 
@@ -21,59 +16,60 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-10 col-lg-offset-1 text-center">
-                <h2>My Work</h2>
-                <hr class="small">
-                <div class="row">
-                <% if @more_repos %>
-                	<h1>Github:</h1>
-                	<p><%= @user.username %></p>
-						<% @more_repos.each do |repo| %>
+            <h2>My Work</h2>
+              <hr class="small">
+
+              <div class="row">
+              	<div class="col-md-6">
+                    <div class="portfolio-item">
+                        <% if @more_repos %>
+                		<h1>Github:</h1>
+                		<p><%= @user.username %></p>
+							<% @more_repos.each do |repo| %>
 							<%= link_to repo.html_url, repo.html_url %><br/>
+							<% end %>
 						<% end %>
-					<% end %>
-                </div>
-              </div>
-                <!-- /.row (nested) -->
+                    </div>
+                </div> <!--  end of block -->
+                <div class="col-md-6">
+                    <div class="portfolio-item">
+                        <% if @user.linkedin_datum %>
+							<div>
+								<h1>Linkedin</h1>
+								<div class="linkedin-right">
+									<%= image_tag $pictures.all.first, width: "139px", height: "139px", id: "linkedin_image_show" %>
+								</div>
+								<div class="linkedin-left">
+									<p style="color: black">
+										<%= @user.linkedin_datum.name %>
+										<%= $safety.headline %>	
+									</p>
+								</div>	
+							</div>
+						<% end %>
+                    </div>
+                </div>  <!--  end of block -->
+              </div> <!-- /.row (nested) -->
+
+                
                 <a href="#" class="btn btn-dark">View More Items</a>
+              
+                </div>
             </div>
-            <!-- /.col-lg-10 -->
         </div>
     <!-- /.container -->
 </section>
 
 
 
-
-
-
-
-
-
-	<div class="row">
+	<!-- <div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<h2>About Me</h2>
-			<p><%= @user["description"] %></p>
+			<p><%#= @user["description"] %></p>
 		</div>
-	</div>
-
-<% if @user.linkedin_datum %>
-	<div>
-		<h1>Linkedin</h1>
-		<p style="color: black">
-			<%= @user.linkedin_datum.name %>
-			<%= @user.linkedin_datum.created_at %>
-			<%= @user.linkedin_datum.location %>
-			<%= @user.linkedin_datum.image %>
-
-			<%= $safety.headline %>
-			
-			<%= $pictures %>
-			<%#= $pic_url %>
-			<%#= image_tag "https://media.licdn.com/mpr/mprx/0_tBVQ93TTfb3xxxF1NkcerhG3uBO0R7F1vnkIr8l7FixpxmvgcbUEtE6YLsM" %>
-			
-		</p>
-	</div>
-<% end %>
+	</div> -->
 
 
+
+</div>
 </div>
