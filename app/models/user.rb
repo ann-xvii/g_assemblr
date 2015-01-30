@@ -12,6 +12,12 @@ class User < ActiveRecord::Base
   has_one :linkedin_datum, :dependent => :destroy
   has_one :github_datum, :dependent => :destroy
   
+
+  linkedin_options = {
+  scope: 'r_fullprofile r_emailaddress',
+  fields: ['id', 'email-address', 'first-name', 'last-name', 'headline', 'location', 'industry', 'picture-url', 'public-profile-url', "picture-urls::(original)"]
+}
+
   def self.from_omniauth(auth)
       where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
         user.provider = auth.provider
@@ -20,5 +26,8 @@ class User < ActiveRecord::Base
         user.password = Devise.friendly_token[0,20]
       end
   end
+
+  li_client = LinkedIn::Client.new
+
 
 end

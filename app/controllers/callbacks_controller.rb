@@ -10,15 +10,25 @@ class CallbacksController < Devise::OmniauthCallbacksController
 		$pic_url = info["image"]
 
 
+		
+		linkedin_options = {
+  scope: 'r_fullprofile r_emailaddress',
+  fields: ['id', 'email-address', 'first-name', 'last-name', 'headline', 'location', 'industry', 'picture-url', 'public-profile-url', "picture-urls::(original)"]
+}
+
 
 		# connect to API
 		$the_client = LinkedIn::Client.new
 		$the_client.authorize_from_access(token, secreto)
-		request_token = 
+		# request_token = 
 		$safety = $the_client.profile
+
+		$dance = $the_client.profile(:fields => [:positions]).positions
 		$pictures = $the_client.picture_urls
-		$connex = $the_client.connections
-		$the_groups = $the_client.group_memberships
+		$connex = LinkedIn::Client.new
+		$connex.authorize_from_access(token, secreto, linkedin_options)
+		
+		# $the_groups = $the_client.group_memberships
 		# $reply = Httparty.get('https://api.linkedin.com/v1/people/~')
 		
 

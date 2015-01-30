@@ -44,6 +44,12 @@
 										<%= @user.linkedin_datum.name %>
 										<%= $safety.headline %>
 										<%= $the_groups %>	
+										<%= $dance %>	
+										
+										<% $safety.each do |safe| %>
+											<%= safe %>
+											<br/>
+										<% end %>	
 									</p>
 								</div>	
 							</div>
