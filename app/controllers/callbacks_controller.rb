@@ -25,8 +25,7 @@ class CallbacksController < Devise::OmniauthCallbacksController
 
 		$dance = $the_client.profile(:fields => [:positions]).positions
 		$pictures = $the_client.picture_urls
-		$connex = LinkedIn::Client.new
-		$connex.authorize_from_access(token, secreto, linkedin_options)
+		
 		
 		# $the_groups = $the_client.group_memberships
 		# $reply = Httparty.get('https://api.linkedin.com/v1/people/~')
