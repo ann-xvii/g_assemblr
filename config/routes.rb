@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'twitter/index' => 'twitter#index'
+
   root "static_pages#home"
   devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   get 'static_pages/about'
