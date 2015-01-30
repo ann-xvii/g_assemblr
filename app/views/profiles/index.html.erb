@@ -1,12 +1,37 @@
 <h1>The GA Network</h1>
 
-<% @appends.each do | a | %>
+<ul id="profiles-list"></ul>
 
-	<% a.each do | b | %>
-		<%= b[:name] %>
-		<%= b[:title] %>
-		<%= image_tag b[:image], class: "img-responsive" %>
-	<% end %>
+<script>
+	
+	$(document).ready(function(){
+		console.log('jQuery loaded');
 
-<% end %>
+		var request = $.ajax({
+			dataType: 'json',
+			type: 'GET',
+			url: 'https://s3.amazonaws.com/uploads.hipchat.com/39979/1432486/p27dYkpNQoWwzUR/people.json',
+			data: {}
+		});
+
+		request.done(function (data){
+			console.log(data);
+			for (var i = 0; i < data.length; i++){
+				console.log(data[0][i].image);
+
+				var profilesDiv = '<li>'
+				profilesDiv += '<img src="' + data[0][i].image + '" width="100px" heigth="200px">';
+				profilesDiv += '<p>' + data[0][i].name + '</p>';
+				profilesDiv += '<p>' + data[0][i].title + '</p>';
+				$("#profiles-list").append(profilesDiv);
+			}
+		});
+	});
+
+</script>
+
+
+
+
+
 
