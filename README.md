@@ -8,11 +8,11 @@ Sign in with your LinkedIn account and instantly access a network of ambitious a
 
 General Assemblr runs on the following technologies:
 
-Rails 4.1.7
-Ruby 2.1.3
-PostgreSQL 9.4.0
-Bootstrap 3.3.2
-LinkedIn, Github and Twitter APIs
-Circle CI for continuous integration
-Heroku for deployment
-RSpec, Factory Girl, and Capybara for testing
+* Rails 4.1.7
+* Ruby 2.1.3
+* PostgreSQL 9.4.0
+* Bootstrap 3.3.2
+* LinkedIn, Github and Twitter APIs
+* Circle CI for continuous integration
+* Heroku for deployment
+* RSpec, Factory Girl, and Capybara for testing
