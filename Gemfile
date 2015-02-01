@@ -33,6 +33,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rspec_junit_formatter', :github => 'circleci/rspec_junit_formatter', group: :test
 
+gem 'thin', group: :production
 
 group :development do
   gem "better_errors"
