@@ -421,6 +421,7 @@ DEPENDENCIES
   pry
   rails (= 4.2.0)
   rails_12factor
+  rails_serve_static_assets
   rspec-rails (~> 3.0)
   rspec_junit_formatter!
   sass-rails (~> 5.0)
