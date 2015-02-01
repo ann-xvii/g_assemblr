@@ -1,6 +1,22 @@
+machine:
+  environment:
+    aws_access_key_id: ENV['LINKEDIN_KEY']
+    aws_secret_access_key: ENV['LINKEDIN_SECRET']
+
+
+dependencies:
+  override:
+    - bundle install:
+        timeout: 240
+        environment:
+          aws_access_key_id: ENV['LINKEDIN_KEY']
+          aws_secret_access_key: ENV['LINKEDIN_SECRET']
+
 deployment:
   staging:
     branch: master
+    heroku:
+      appname: generalassemblr
     codedeploy:
       appname-1234:
         application_root: /

@@ -10,6 +10,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'httparty'
 
 
 # SOCIAL GEMS
@@ -17,9 +18,11 @@ gem 'therubyracer', platforms: :ruby
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-linkedin'
+gem 'linkedin'
 gem 'twitter', '~> 5.13.0'
-gem 'dotenv-rails', :groups => [:development, :test]
 gem 'feedjira', '~> 1.6.0'
+
+gem 'github_api'
 
 gem 'carrierwave'
 gem 'fog'
@@ -30,6 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'rspec_junit_formatter', :github => 'circleci/rspec_junit_formatter', group: :test
 
+gem 'thin', group: :production
+gem 'rails_serve_static_assets'
 
 group :development do
   gem "better_errors"

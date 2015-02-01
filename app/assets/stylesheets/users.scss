@@ -4,11 +4,13 @@
 
 .profile {
 	color: white;
+	color: black;
 	font-size: 20px;
 	img {
 		border-radius: 45%;
 	}
 }	
+
 
 #myGallery {
 	width: 100%;
@@ -86,7 +88,7 @@ h1 {
 }
 .navigationTabs li a{
 	float: left;
-	dispaly: block;
+	display: block;
 	height: 23px;
 	line-height: 23px;
 	padding: 0 10px;
@@ -176,3 +178,8 @@ h1 {
 	height: 100%;
 	background: url(images/blank.gif);
 }
+
+#linkedin_image_show {
+	border-radius: 0;
+}
+
