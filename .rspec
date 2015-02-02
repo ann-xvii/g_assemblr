@@ -1,7 +1,4 @@
 --color
 --require spec_helper
-<<<<<<< HEAD
 --format=documentation
-=======
---format=documentation
->>>>>>> d560eb45d308c930ba11e45f1e15e36f48661dac
+
