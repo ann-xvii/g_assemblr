@@ -170,7 +170,11 @@
                                     <ul class='tweets'>
                                     <% @tweets.each do |tweet| %>
                                         <li><%= tweet.text %></li>
+                                            <% if tweet.media.length > 0 %>
+                                                <li><%= tweet.media.inspect %></li>
+                                            <% end %>
                                         <a href="<%= tweet.url %>"><%= tweet.url %></a>
+
                                     <% end %>
                                     </ul>
                                   </div>
