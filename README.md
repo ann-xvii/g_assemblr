@@ -59,7 +59,7 @@ gem install name_of_gem
 
 ## Databases in General Assemblr
 
-To set up the database in General Assemblr, please install Postgresql your local machine and include the pg gem in the app
+To set up the database in General Assemblr, please install PostgreSQL your local machine and include the pg gem in the app
 
 In order to run the test suite, you'll need to create and migrate with the following commands:
 ```
