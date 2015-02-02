@@ -1,1 +1,1 @@
-PROGRAMS = ["Web Development", "User Experience Design", "Sales & Business Development", "Product Management"]
+PROGRAMS = ["Web Development", "User Experience Design", "Sales & Business Development", "Product Management", "Currently not enrolled"]
