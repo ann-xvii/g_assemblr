@@ -21,7 +21,9 @@ class CallbacksController < Devise::OmniauthCallbacksController
 		$the_client = LinkedIn::Client.new
 		$the_client.authorize_from_access(token, secreto)
 		# request_token = 
-		$safety = $the_client.profile
+		$client_profile = $the_client.profile
+
+		$client_url = $client_profile.to_hash["site_standard_profile_request"]["url"]
 
 		$dance = $the_client.profile(:fields => [:positions]).positions
 		$pictures = $the_client.picture_urls

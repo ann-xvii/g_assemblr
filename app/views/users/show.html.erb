@@ -42,18 +42,24 @@
 								<div class="linkedin-left">
 									<p style="color: black">
 										<%= @user.linkedin_datum.name %>
-										<%= $safety.headline %>
+										<%= $client_profile.headline %>
 										<%= $the_groups %>	
-										<%= $dance %>	
+										<%#= $dance %>	
 										
-										<% $safety.each do |safe| %>
-											<%= safe %>
+										<%# $client_profile.each do |safe| %>
+											<%#= safe %>
 											<br/>
-										<% end %>	
+										<%# end %>
+
+										
+										<%= link_to "LinkedIn Profile", $client_profile.to_hash["site_standard_profile_request"]["url"] %>
 									</p>
 								</div>	
 							</div>
 						<% end %>
+
+						<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/CompanyProfile" data-id="2408664" data-format="inline"></script>
                     </div>
                 </div>  <!--  end of block -->
               </div> <!-- /.row (nested) -->
