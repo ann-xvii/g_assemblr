@@ -56,7 +56,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>General Assemblr is the definitive source of news for all things GA!</h2>
-                    <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p>
+                    <!-- <p class="lead">This theme features some wonderful photography courtesy of <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a>.</p> -->
                 </div>
             </div>
             <!-- /.row -->
@@ -109,7 +109,7 @@
                                     <strong>What Do We Do?</strong>
                                 </h4>
                                 <p>Check out our immersive program offerings.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <a href="https://generalassemb.ly/education?format=immersives" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
@@ -119,10 +119,10 @@
                                 <i class="fa fa-shield fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
-                                    <strong>See For Yourself</strong>
+                                    <strong>Try It Out!</strong>
                                 </h4>
-                                <p>Check out GA events near you.</p>
-                                <a href="#" class="btn btn-light">Learn More</a>
+                                <p>Check out our online course offerings.</p>
+                                <a href="https://generalassemb.ly/online/featured" class="btn btn-light">Learn More</a>
                             </div>
                         </div>
                     </div>
@@ -153,7 +153,7 @@
                         <div class="col-md-6">
 
 
-                            <div class="portfolio-item" style="width: 458px; height: 305px; overflow-y: scroll;">
+                            <div class="portfolio-item" style="overflow-y: scroll;">
                             <div  data-toggle="modal" data-target="#myModal">
                                     <img class="img-portfolio img-responsive" src="<%= image_url('portfolio-twitter.jpg')%>">
                                 </div>
@@ -196,21 +196,21 @@
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="<%= image_url('portfolio-3.jpg')%>">
+                                <a href="/profiles">
+                                    <img class="img-portfolio img-responsive" src="<%= image_url('portfolio-profiles.jpg')%>">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="<%= image_url('portfolio-4.jpg')%>">
+                                <a href="https://generalassemb.ly/education?format=events">
+                                    <img class="img-portfolio img-responsive" src="<%= image_url('portfolio-visit.jpg')%>">
                                 </a>
                             </div>
                         </div>
                     </div>
                     <!-- /.row (nested) -->
-                    <a href="#" class="btn btn-dark">View More Items</a>
+                    <a href="#" class="btn btn-dark">Jump To Top!</a>
                 </div>
                 <!-- /.col-lg-10 -->
             </div>
@@ -224,9 +224,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h3>The buttons below are impossible to resist.</h3>
-                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
-                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                    <h3>What are you waiting for?</h3>
+                    <!-- <a href="#" class="btn btn-lg btn-light">Click Me!</a> -->
+                    <%= link_to "Sign Up!", new_user_registration_path, class: "btn btn-lg btn-light"  %>
+                    <!-- <a href="#" class="btn btn-lg btn-dark">Look at Me!</a> -->
+
                 </div>
             </div>
         </div>
