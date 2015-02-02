@@ -30,7 +30,6 @@ General Assemblr uses the following gems:
 * rspec-rails (testing)
 * factory_girl_rails (testing)
 * capybara (testing)
-
 * therubyracer
 * devise (user authentication)
 * omniauth (authentication)
@@ -39,7 +38,6 @@ General Assemblr uses the following gems:
 * twitter (twitter API wrapper)
 * github_api (github API wrapper)
 * feedjira
-
 * carrierwave
 * fog
 * mini_magick
@@ -84,7 +82,7 @@ General Assemblr uses RSpec, Factory Girl and Capybara for testing models, contr
 
 ## Thanks for visiting General Assemblr!
 
-Feel free to ask questions or send pull requests. Enjoy!
+Feel free to ask questions or send pull requests. Donations can be made in pizza or green tea. Enjoy!
 
 
 
