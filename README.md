@@ -1,4 +1,4 @@
-# Welcome to General Assemblr !!
+# Welcome to General Assemblr !
 
 General Assemblr is a comprehensive social network geared toward the growing GA alumni and student community.
 
