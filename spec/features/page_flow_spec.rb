@@ -5,11 +5,25 @@ require "rails_helper"
 	# when you click on it it will load index, page we just created
 	# should say welcome to the blog
 
-# describe "the flow of the app" do 
-# 	it "loads the posts index when we click on the button" do 
-# 		visit "/"
-# 		click_link('Blog')
-# 		expect(page).to have_content("Welcome to my blog")
-# 	end
+describe "the flow of the app" do 
+	it "renders the signup page when we click on the signup link in the navbar" do
+		visit "/"
+		click_link("Sign Up")
+		expect(page).to have_content("Sign Up")
+	end
 
-# end
+
+	it "takes you to the About section when you click the Find Out More link" do 
+		visit "/"
+		click_link("Find Out More")
+		expect(page).to have_content("General Assemblr is the definitive source of news for all things GA!")
+	end
+
+
+	it "takes you to the login page when you click the Log In link" do
+		visit "/"
+		click_link("Log In")
+		expect(page).to have_content("Log in")
+	end
+ 
+end
