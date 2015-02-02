@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/activerecord-hackery/polyamorous.git
+  revision: 70cce201d397f373c1c831126b1d87779b8ac9af
+  specs:
+    polyamorous (1.1.0)
+      activerecord (>= 3.0)
+
+GIT
   remote: git://github.com/circleci/rspec_junit_formatter.git
   revision: 7b098c8ab2ac5e5f78190b51629ed6d67a9de4d1
   specs:
@@ -429,6 +436,7 @@ DEPENDENCIES
   omniauth-linkedin
   pg
   poltergeist
+  polyamorous!
   pry
   rails (= 4.2.0)
   rails_12factor

@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'httparty'
+gem 'polyamorous', github: 'activerecord-hackery/polyamorous'
 
 # SOCIAL GEMS
 gem 'therubyracer', platforms: :ruby
