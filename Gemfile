@@ -60,8 +60,6 @@ gem 'factory_girl_rails'
 
 group :test do
 	gem 'capybara', '~> 2.4.4'
-	
-	
 end
 
 gem 'rails_12factor', group: :production
