@@ -22,6 +22,8 @@ gem 'linkedin'
 gem 'twitter', '~> 5.13.0'
 gem 'feedjira', '~> 1.6.0'
 
+gem 'quiet_assets'
+
 gem 'github_api'
 
 gem 'carrierwave'
